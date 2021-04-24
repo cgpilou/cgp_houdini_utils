@@ -44,6 +44,16 @@ class Parm(object):
         # return
         return getattr(self.houParm(), attribute)
 
+    def __repr__(self):
+        """the representation of the parm
+
+        :return: the representation of the parm
+        :rtype: str
+        """
+
+        # return
+        return '{0}({1!r}, {2!r})'.format(self.__class__.__name__, self.node().path(), self.name())
+
     # COMMANDS #
 
     def evalAsLiteral(self):

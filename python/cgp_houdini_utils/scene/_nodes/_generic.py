@@ -38,6 +38,16 @@ class Node(object):
         # return
         return getattr(self.houNode(), attribute)
 
+    def __repr__(self):
+        """the representation of the parm
+
+        :return: the representation of the parm
+        :rtype: str
+        """
+
+        # return
+        return '{0}({1!r})'.format(self.__class__.__name__, self.path())
+
     # COMMANDS #
 
     def houNode(self):
