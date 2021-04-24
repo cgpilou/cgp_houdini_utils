@@ -1,0 +1,36 @@
+
+{
+    "requires" : ["cgp_generic_utils"],
+    "env" :
+    [
+        {
+            "CGP_HOUDINI_UTILS_ROOT" : ".../cgp_houdini_utils"
+        },
+
+        {
+            "HOUDINI_VEX_PATH" :
+            {
+                "value": "$CGP_HOUDINI_UTILS_ROOT/vex",
+                "method": "append"
+            },
+
+            "PYTHONPATH" :
+            {
+                "value": "$CGP_HOUDINI_UTILS_ROOT/python",
+                "method": "append"
+            },
+
+            "HOUDINI_PATH" :
+            {
+                "value": "$CGP_HOUDINI_UTILS_ROOT/scripts",
+                "method": "append"
+            },
+
+            "HOUDINI_OTLSCAN_PATH" :
+            {
+                "value": "$CGP_HOUDINI_UTILS_ROOT/otls",
+                "method": "append"
+            }
+        }
+    ]
+}
