@@ -1,6 +1,8 @@
-=================
-cgp_houdini_utils
-=================
+=======================
+cgp_houdini_utils 2.0.1
+=======================
+
+| **requires :** cgp_generic_utils 11.0.0
 
 | **Author :** Pierre Violanti
 | **Contact :** https://www.linkedin.com/in/cgpilou/

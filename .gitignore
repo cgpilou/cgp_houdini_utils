@@ -3,5 +3,6 @@
 .project
 .pydevproject
 .vscode/
+/hda/backup/
 test/.pytest_cache/
 test/**/.pytest_cache/

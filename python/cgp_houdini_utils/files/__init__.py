@@ -1,13 +1,27 @@
 """
-package : cgp_houdini_utils.files
-file : __init__.py
-
-description: handles file operations
+houdini file objects and management functions
 """
 
+
+# import rodeo
+import cgp_generic_utils.files
+
 # imports local
-from ._api import registerFileTypes
-from ._houdini import HipFile
+from ._files import HoudiniFile, HipFile, HiplcFile, HipncFile
 
 
-__all__ = ['registerFileTypes', 'HipFile']
+def registerFileTypes():
+    """register houdini file types to grant generic file management functions access to the houdini file objects
+    """
+
+    # collect file types
+    fileTypes = {cls._extension: cls
+                 for cls in [HipFile,
+                             HiplcFile,
+                             HipncFile]}
+
+    # register
+    cgp_generic_utils.files.registerFileTypes(fileTypes)
+
+
+__all__ = ['registerFileTypes', 'HoudiniFile', 'HipFile', 'HiplcFile', 'HipncFile']
